@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        /* 页面整体布局 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            background: url('背景.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* 导航栏 */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        航行 保险商实验所{列表样式: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 100px;
+            text-align: center;
+            color: white;
+        }
+
+        .sidebar img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .sidebar p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        /* 主体内容区 */
+        .main-content {
+            margin-left: 250px;
+            margin-top: 60px;
+            padding: 20px;
+            width: calc(100% - 250px);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .main-content h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .main-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* 让页面横屏 */
+        @media (max-width: 768px) {
+            body {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                padding-top: 50px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .main-content {
+                margin-left: 0;
+                width: 100%;
+                padding: 15px;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#">关于我</a></li>
+            <li><a href="#">项目展示</a></li>
+            <li><a href="#">联系方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+        <img src="mmexport1698370598966.jpg" alt="头像">
+        <h2>我的名字</h2>
+        <p>前端开发工程师</p>
+        <p>欢迎来到我的个人主页！</p>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="main-content">
+        <h1>欢迎来到我的个人主页</h1>
+        <p>
+            你好，我是一名前端开发工程师，热衷于创造美观、简洁、易用的网页和应用。在这里，你可以了解我在前端开发领域的技术背景和一些项目展示。
+        </p>
+        <p>
+            你可以通过导航栏查看我的作品集、关于我以及如何联系我。如果你对我的工作感兴趣，请随时与我联系。
+        </p>
+    </div>
+</body>
+</html>
