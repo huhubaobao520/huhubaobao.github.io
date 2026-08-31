@@ -1,0 +1,384 @@
+<html lang="zh-CN">
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+  <title>个人主页</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <script src="js/jq.js"></script> 
+ </head> 
+ <body id="v1" style=""> 
+  <video id="background-video" autoplay="" muted="" loop="" playsinline=""> 
+   <source id="v2" src="1.mp4" type="video/mp4"> 
+  </video> 
+  <div id="v3" class="screen-mask"></div> 
+  <div id="v4" class="floating-orb orb-pink"></div> 
+  <div id="v5" class="floating-orb orb-blue"></div> 
+  <div id="v6" class="floating-orb orb-green"></div> 
+  <div id="v7" class="layout-wrapper"> 
+   <button class="menu-toggle" id="menuToggle" aria-label="切换菜单"> <span id="v8"></span><span id="v9"></span><span id="v10"></span> </button> 
+   <div class="sidebar-overlay" id="sidebarOverlay"> 
+   </div> 
+   <aside class="side-panel" id="sidePanel"> 
+    <header id="v11" class="panel-header"> 
+     <div id="v12" class="panel-avatar"> 
+      <img id="v325" src="头像.jpg" alt="头像"> 
+      <span id="v15" class="online-badge"></span> 
+     </div> 
+     <span id="v16" class="panel-nickname">狐狐宝包</span> 
+     <span id="v17" class="panel-title">个人创作者</span> 
+    </header> 
+    <nav id="v18" class="page-nav"> 
+     <button id="v19" class="nav-entry active" data-section="home"> 
+      <svg id="v20" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <path id="v21" d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path> 
+       <polyline id="v22" points="9 22 9 12 15 12 15 22"></polyline> 
+      </svg> <span id="v23">首页</span> </button> 
+     <button id="v24" class="nav-entry" data-section="about"> 
+      <svg id="v25" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <path id="v26" d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path> 
+       <circle id="v27" cx="12" cy="7" r="4"></circle> 
+      </svg> <span id="v28">关于我</span> </button> 
+     <button id="v29" class="nav-entry" data-section="skills"> 
+      <svg id="v30" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <path id="v31" d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path> 
+      </svg> <span id="v32">粉丝福利</span> </button> 
+      <button id="vnew_group" class="nav-entry" data-section="group">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+    <circle cx="9" cy="7" r="4"></circle>
+    <path d="M23 21v-2a4 4 0 0 0-3-3"></path>
+    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span>粉丝群</span></button>
+     <button id="v33" class="nav-entry" data-section="projects"> 
+      <svg id="v34" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <rect id="v35" x="2" y="3" width="20" height="14" rx="2" ry="2"></rect> 
+       <line id="v36" x1="8" y1="21" x2="16" y2="21"></line> 
+       <line id="v37" x1="12" y1="17" x2="12" y2="21"></line> 
+      </svg> <span id="v38">作品集</span> </button> 
+     <button id="v39" class="nav-entry" data-section="contact"> 
+      <svg id="v40" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <path id="v41" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path> 
+       <polyline id="v42" points="22,6 12,13 2,6"></polyline> 
+      </svg> <span id="v43">联系方式</span> </button> 
+     <button id="v44" class="nav-entry" data-section="links"> 
+      <svg id="v45" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <path id="v46" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path> 
+       <path id="v47" d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> 
+      </svg> <span id="v48">友情链接</span> </button> 
+    </nav> 
+    <footer id="v49" class="panel-footer"> 
+     <button class="viz-toggle" id="vizSwitcher"> 
+      <svg id="v50" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+       <rect id="v51" x="3" y="3" width="18" height="18" rx="2"></rect> 
+       <line id="v52" x1="9" y1="9" x2="9" y2="15"></line> 
+       <line id="v53" x1="15" y1="7" x2="15" y2="17"></line> 
+       <line id="v54" x1="12" y1="11" x2="12" y2="13"></line> 
+      </svg> <span id="v55">可视化</span> </button> 
+     <span id="v56" class="live-indicator"></span> 
+     <span id="v57">在线 · 3 人在看</span> 
+    </footer> 
+   </aside> 
+   <main id="v58" class="main-stage"> 
+    <section class="stage active" id="section-home"> 
+     <div id="v59" class="welcome-area"> 
+      <div id="v60" class="avatar-cluster"> 
+       <canvas id="musicViz" class="music-viz" width="300" height="60"> 
+       </canvas> 
+       <div id="v61" class="avatar-frame" style="transform: scale(0.9);"> 
+        <div id="v62" class="avatar-ring"></div> 
+        <img id="v326" src="头像.jpg" alt="头像"> 
+       </div> 
+       <div id="v65" class="avatar-aura"></div> 
+      </div> 
+      <h1 id="v66" class="user-name">狐狐宝包</h1> 
+      <p class="user-slogan" id="typewriter">个人开发创</p> 
+      <p id="v67" class="user-brief">个人创作者</p> 
+      <div id="v68" class="stats-row"> 
+       <div id="v69" class="stats-cell"> 
+        <span id="v70" class="stats-figure">19</span> 
+        <span id="v71" class="stats-unit">年龄</span> 
+       </div> 
+       <div id="v72" class="stats-cell"> 
+        <span id="v73" class="stats-figure">2</span> 
+        <span id="v74" class="stats-unit">网站总数</span> 
+       </div> 
+       <div id="v75" class="stats-cell"> 
+        <span id="v76" class="stats-figure">2</span> 
+        <span id="v77" class="stats-unit">当前站点</span> 
+       </div> 
+       <div id="v78" class="stats-cell"> 
+        <span id="v79" class="stats-figure">开心</span> 
+        <span id="v80" class="stats-unit">状态</span> 
+       </div> 
+      </div> 
+      <div id="v81" class="action-group"> 
+       <button class="action-primary" id="learnMore">了解更多</button> 
+       <button class="action-secondary" id="contactMe">联系我</button> 
+      </div> 
+      <div class="daily-quote" id="quoteContainer"> 
+       <span id="v82" class="quote-mark">"</span> 
+       <p class="quote-body" id="quoteBody">没心没肺，快乐加倍</p> 
+       <p class="quote-source" id="quoteSource">狐狐宝包</p> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="stage" id="section-about"> 
+     <div id="v83" class="stage-container"> 
+      <header id="v84" class="stage-header"> 
+       <span id="v85" class="stage-icon">👤</span> 
+       <h2 id="v86" class="stage-title">关于我</h2> 
+      </header> 
+      <div id="v87" class="stage-divider"></div> 
+      <article id="v88" class="bio-card"> 
+       <div id="v89" class="bio-content"> 
+        <p id="v90">狐狐宝包</p> 
+       </div> 
+      </article> 
+      <div id="v93" class="meta-grid"> 
+       <div id="v94" class="meta-cell"> 
+        <span id="v95" class="meta-emoji">📍</span> 
+        <div id="v96"> 
+         <span id="v97" class="meta-key">现居</span> 
+         <span id="v98" class="meta-val">中国 · 山西</span> 
+        </div> 
+       </div> 
+       <div id="v99" class="meta-cell"> 
+        <span id="v100" class="meta-emoji">🔞</span> 
+        <div id="v101"> 
+         <span id="v102" class="meta-key"></span> 
+         <span id="v103" class="meta-val">男</span> 
+        </div> 
+       </div> 
+       <div id="v104" class="meta-cell"> 
+        <span id="v105" class="meta-emoji">🎓</span> 
+        <div id="v106"> 
+         <span id="v107" class="meta-key">交友要求</span> 
+         <span id="v108" class="meta-val"></span> 
+        </div> 
+       </div> 
+       <div id="v109" class="meta-cell"> 
+        <span id="v110" class="meta-emoji">🌐</span> 
+        <div id="v111"> 
+         <span id="v112" class="meta-key">语言</span> 
+         <span id="v113" class="meta-val">中文 </span> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="stage" id="section-skills"> 
+     <div id="v114" class="stage-container"> 
+      <header id="v115" class="stage-header"> 
+       <span id="v116" class="stage-icon">💗</span> 
+       <h2 id="v117" class="stage-title">粉丝福利</h2> 
+      </header> 
+      <div id="v118" class="stage-divider"></div> 
+      <div id="v119" class="skill-panel"> 
+       <div id="v120" class="skill-group"> 
+        <div id="v121" class="skill-group-header"> 
+         <span id="v122" class="skill-emoji">❤️‍🔥</span> 
+         <h3 id="v123">福利</h3> 
+        </div> 
+        <p class="stage-hint">   <font size="3" color="red">新年期间</font></p>
+        <p >待更新</p> 
+       </div> 
+       <div id="v144" class="skill-group"> 
+        <div id="v145" class="skill-group-header"> 
+         <span id="v146" class="skill-emoji">💞</span> 
+         <h3 id="v147">抖音</h3> 
+        </div> 
+        <p class="stage-hint">   <font size="3" color="red">粉丝1000</font></p>
+        <p>待更新</p>
+       </div> 
+       <div id="v163" class="skill-group"> 
+        <div id="v164" class="skill-group-header"> 
+         <span id="v165" class="skill-emoji">💗</span> 
+         <h3 id="v166">哔哩哔哩</h3> 
+        </div> 
+        <p class="stage-hint">   <font size="3" color="red">粉丝3000</font></p>
+        <p>待更新</p>
+       </div> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="stage" id="section-group">
+     <div class="stage-container">
+      <header class="stage-header">
+       <span class="stage-icon">👥</span>
+       <h2 class="stage-title">粉丝群</h2>
+      </header>
+      <div class="stage-divider"></div>
+      <div class="skill-panel">
+            <!-- 进群须知 单独卡片 -->
+      <div style="margin-top:1.2rem;">
+        <div class="skill-group">
+          <div class="skill-group-header">
+            <span class="skill-emoji">📜</span>
+            <h3>进群须知</h3>
+          </div>
+          <p style="color:rgba(255,255,255,0.55);line-height:1.7;">
+            1. 禁止广告、引战、辱骂他人<br>
+            2. 请勿随意刷屏，文明聊天<br>
+            3. 群内禁止传播违规内容
+          </p>
+        </div>
+      </div>
+       <!-- QQ粉丝群 -->
+       <div class="skill-group">
+        <div class="skill-group-header">
+         <span class="skill-emoji">🐧</span>
+         <h3>QQ粉丝群</h3>
+        </div>
+        <div style="margin-top:10px;">
+          <img src="6.jpg" onclick="window.open(this.src)" alt="QQ粉丝群二维码" style="width:100%;border-radius:10px;object-fit:cover;cursor:pointer;">
+        </div>
+        <p style="margin-top:8px;color:rgba(255,255,255,0.55);">
+          群号：<strong>填写你的QQ群号</strong><br>
+          进群请遵守群规，友好交流。
+        </p>
+       </div>
+       <!-- 抖音粉丝群 -->
+       <div class="skill-group">
+        <div class="skill-group-header">
+         <span class="skill-emoji">🎵</span>
+         <h3>抖音粉丝群</h3>
+        </div>
+        <div style="margin-top:10px;">
+          <img src="头像.jpg" onclick="window.open(this.src)" alt="抖音粉丝群二维码" style="width:100%;border-radius:10px;object-fit:cover;cursor:pointer;">
+        </div>
+        <p style="margin-top:8px;color:rgba(255,255,255,0.55);">
+          打开抖音扫码加入粉丝群<br>
+          接收更新动态与福利通知。
+        </p>
+       </div>
+      </div>
+     </div>
+</section>
+    <section class="stage" id="section-projects"> 
+     <div id="v182" class="stage-container"> 
+      <header id="v183" class="stage-header"> 
+       <span id="v184" class="stage-icon">📁</span> 
+       <h2 id="v185" class="stage-title">作品集</h2> 
+      </header> 
+      <div id="v186" class="stage-divider"></div> 
+      <p class="stage-hint"><font size="3" color="red">本站所有素材均为原创，仅供展示用途，未经许可不得转载或商用!!!</font></p>
+      <div id="v187" class="project-wall"> 
+       <article id="v188" class="project-entry"> 
+        <div class="item-carousel">
+         <div class="item-track">
+           <div class="item-slide">
+             <img src="头像.jpg">
+           </div>
+         </div>
+         <button class="item-car-prev">‹</button>
+         <button class="item-car-next">›</button>
+       </div>
+        <div id="v191" class="project-detail"> 
+         <h3 id="v328">狐狐宝包</h3> 
+         <p id="v329">一只来自狐狸部族的</p> 
+        </div> 
+       </article> 
+       <article id="v201" class="project-entry"> 
+        <div class="item-carousel">
+         <div class="item-track">
+           <div class="item-slide">
+             <img src="6.jpg">
+           </div>
+         </div>
+         <button class="item-car-prev">‹</button>
+         <button class="item-car-next">›</button>
+        </div> 
+        <div id="v204" class="project-detail"> 
+         <h3 id="v205">狐狐丫</h3> 
+         <p id="v206">一款优雅的移动端设计工具，专注于用户体验与交互流畅度。</p> 
+        </div> 
+       </article> 
+       <p class="stage-hint">   <font size="3" color="red">注:作品集内所有素材均有版权!!!</font></p>
+      </div> 
+     </div> 
+    </section> 
+    <section class="stage" id="section-contact"> 
+     <div id="v240" class="stage-container"> 
+      <header id="v241" class="stage-header"> 
+       <span id="v242" class="stage-icon">📫</span> 
+       <h2 id="v243" class="stage-title">联系方式</h2> 
+      </header> 
+      <div id="v244" class="stage-divider"></div> 
+      <p id="v245" class="stage-hint">欢迎通过以下方式与我取得联系</p> 
+      <div id="v246" class="contact-wall"> 
+       <!--邮箱--> 
+       <a id="v247" href="mailto:huhubaobao520@outlook.com" class="contact-entry" data-type="mail"> <span id="v248" class="contact-icon">
+         <svg id="v249" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"> 
+          <path id="v250" d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path> 
+          <polyline id="v251" points="22,6 12,13 2,6"></polyline> 
+         </svg></span> <span id="v252" class="contact-name">邮箱</span> <span id="v253" class="contact-addr">huhubaobao520@outlook.com</span> </a> 
+       <!--哔哩哔哩--> 
+       <a id="v266" href="https://b23.tv/kWLSVXF" target="_blank" class="contact-entry" data-type="bilibili"> <span id="v267" class="contact-icon"> 
+         <svg id="v268" viewbox="0 0 24 24" fill="currentColor"> 
+          <path id="v269" d="M17.813 4.653h.854c1.51.054 2.769.578 3.773 1.574 1.004.995 1.524 2.249 1.56 3.76v7.36c-.036 1.51-.556 2.769-1.56 3.773s-2.262 1.524-3.773 1.56H5.333c-1.51-.036-2.769-.556-3.773-1.56S.036 18.858 0 17.347v-7.36c.036-1.511.556-2.765 1.56-3.76 1.004-.996 2.262-1.52 3.773-1.574h.774l-1.174-1.12a1.234 1.234 0 0 1-.373-.906c0-.356.124-.658.373-.907l.027-.027c.267-.249.573-.373.92-.373.347 0 .662.124.947.373L8.08 4.653h7.84l1.413-1.347c.267-.249.573-.373.92-.373.347 0 .662.124.947.373l.026.027c.267.249.4.551.4.907 0 .355-.133.657-.4.906l-1.413 1.12z"></path> 
+         </svg></span> <span id="v270" class="contact-name">B站</span> <span id="v330" class="contact-addr">@狐狐宝包</span></a> 
+       <!-- 抖音 --> 
+       <a id="v331" href="https://v.douyin.com/yVa_9S0aOM0/ 0@0.com :1pm" target="_blank" class="contact-entry" data-type="douyin"><span id="v332" class="contact-icon"> 
+         <svg id="v333" viewbox="0 0 24 24" fill="currentColor"> 
+          <path id="v334" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.66 1.66-1.17 3.98-1.56 6.15-1.21.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.02-1.36 1.7-.24.67-.22 1.42.03 2.09.32.83 1.06 1.47 1.92 1.72.79.22 1.65.19 2.48-.04.83-.27 1.5-1.02 1.84-1.83.02-.15.02-.31.01-.46.02-2.3.01-4.61.01-6.91v-1.23c1.22.27 2.4.82 3.44 1.63.44.32.84.68 1.18 1.09V3.37c-1.32-.37-2.68-.52-4.03-.45-.73-1.36-1.94-2.34-3.33-2.84-.94-.33-1.93-.46-2.93-.46z"></path> 
+         </svg></span><span id="v335" class="contact-name">抖音</span><span id="v336" class="contact-addr">@千屿</span> </a> 
+       <!--快手--> 
+      </div> 
+     </div> 
+    </section> 
+    <section class="stage" id="section-links"> 
+     <div id="v283" class="stage-container"> 
+      <header id="v284" class="stage-header"> 
+       <span id="v285" class="stage-icon">🔗</span> 
+       <h2 id="v286" class="stage-title">友情链接</h2> 
+      </header> 
+      <div id="v287" class="stage-divider"></div> 
+      <p id="v288" class="stage-hint">我的朋友们</p> 
+      <div id="v289" class="friend-wall"> 
+       <a id="v290" href="https://huhubaobao520.github.io/huhu.github.io/" target="_blank" class="friend-entry"><span id="v291" class="friend-idx">01</span> 
+        <div id="v292" class="friend-info"> 
+         <strong id="v293">主页一</strong> 
+         <p id="v294">https://huhubaobao520.github.io/huhu.github.io/</p> 
+        </div></a> 
+       <a id="v295" href="" target="_blank" class="friend-entry"><span id="v296" class="friend-idx">02</span> 
+        <div id="v297" class="friend-info"> 
+         <strong id="v298">主页二(本站)</strong> 
+         <p id="v299">https://huhubaobao520.github.io/huhubaobao.github.io/</p> 
+        </div></a> 
+       <a id="v300" href="https://example" target="_blank" class="friend-entry"><span id="v301" class="friend-idx">03</span> 
+        <div id="v302" class="friend-info"> 
+         <strong id="v303">暂无链接</strong> 
+         <p id="v304">待更新</p> 
+        </div></a> 
+       <a id="v305" href="https://example" target="_blank" class="friend-entry"><span id="v306" class="friend-idx">04</span> 
+        <div id="v307" class="friend-info"> 
+         <strong id="v308">暂无链接</strong> 
+         <p id="v309">待更新</p> 
+        </div></a> 
+       <a id="v310" href="https://example" target="_blank" class="friend-entry"><span id="v311" class="friend-idx">05</span> 
+        <div id="v312" class="friend-info"> 
+         <strong id="v313">暂无链接</strong> 
+         <p id="v314">待更新</p> 
+        </div></a> 
+       <a id="v315" href="https://example" target="_blank" class="friend-entry"><span id="v316" class="friend-idx">06</span> 
+        <div id="v317" class="friend-info"> 
+         <strong id="v318">暂无链接</strong> 
+         <p id="v319">待更新</p> 
+        </div></a> 
+      </div> 
+     </div> 
+    </section> 
+   </main> 
+  </div> 
+  <button id="playerToggle" title="播放/暂停" aria-label="音乐播放控制"> 
+   <svg id="v320" class="play-icon" viewbox="0 0 24 24" fill="currentColor"> 
+    <path id="v321" d="M8 5v14l11-7z"></path> 
+   </svg> 
+   <svg id="v322" class="pause-icon" viewbox="0 0 24 24" fill="currentColor"> 
+    <path id="v323" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path> 
+   </svg> </button> 
+  <audio id="backgroundMusic" loop="" preload="metadata" crossorigin="anonymous"> 
+   <source id="v324" src="letting go.mp3" type="audio/mpeg"> 
+  </audio> 
+  <script src="script.js"></script>  
+ </body>
+</html>
